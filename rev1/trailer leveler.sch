@@ -1,0 +1,1492 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Trailer Leveler"
+Date "2020-11-19"
+Rev "1"
+Comp ""
+Comment1 "Kane Stoboi"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L conn:Conn_02x03_Odd_Even J1
+U 1 1 5C383923
+P 5350 1400
+F 0 "J1" H 5400 1600 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 5400 1200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm" H 5350 1400 50  0001 C CNN
+F 3 "" H 5350 1400 50  0001 C CNN
+	1    5350 1400
+	1    0    0    -1  
+$EndComp
+Text GLabel 5900 1300 2    45   Input ~ 0
+RST
+Text GLabel 4900 1400 0    45   Input ~ 0
+MOSI
+Text GLabel 5900 1400 2    45   Input ~ 0
+SCK
+Text GLabel 5900 1500 2    45   Input ~ 0
+MISO
+Text GLabel 6400 2250 2    45   Input ~ 0
+MOSI
+Text GLabel 6400 2350 2    45   Input ~ 0
+MISO
+Text GLabel 6400 2450 2    45   Input ~ 0
+SCK
+Text GLabel 6400 3200 2    45   Input ~ 0
+SDA
+Text GLabel 6400 3300 2    45   Input ~ 0
+SCL
+$Comp
+L atmel:ATMEGA328P-AU U2
+U 1 1 5C3AA62F
+P 5300 3050
+F 0 "U2" H 4550 4300 50  0000 L BNN
+F 1 "ATMEGA328P-AU" H 5700 1650 50  0000 L BNN
+F 2 "Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm" H 5300 3050 50  0001 C CIN
+F 3 "" H 5300 3050 50  0001 C CNN
+F 4 "ATMEGA328P-AU" H 5300 3050 50  0001 C CNN "Manufacturer Part Number"
+F 5 "N/A" H 5300 3050 50  0001 C CNN "Supplier"
+F 6 "N/A" H 5300 3050 50  0001 C CNN "Supplier P/N"
+F 7 "Microchip Technology" H -2600 700 50  0001 C CNN "Manufacturer"
+	1    5300 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR017
+U 1 1 5C3AA6F8
+P 4200 4150
+F 0 "#PWR017" H 4200 3900 50  0001 C CNN
+F 1 "GNDD" H 4200 4025 50  0000 C CNN
+F 2 "" H 4200 4150 50  0001 C CNN
+F 3 "" H 4200 4150 50  0001 C CNN
+	1    4200 4150
+	1    0    0    -1  
+$EndComp
+Text GLabel 6400 3400 2    45   Input ~ 0
+RST
+$Comp
+L conn:USB_OTG J5
+U 1 1 5C3AC7CC
+P 750 7150
+F 0 "J5" H 550 7600 50  0000 L CNN
+F 1 "USB_OTG" H 550 7500 50  0000 L CNN
+F 2 "USB:USB_Micro_C77238" H 900 7100 50  0001 C CNN
+F 3 "" H 900 7100 50  0001 C CNN
+F 4 "" H 750 7150 50  0001 C CNN "Manufacturer P/N"
+F 5 "LCSC" H 750 7150 50  0001 C CNN "Supplier"
+F 6 "C77238" H 750 7150 50  0001 C CNN "Supplier P/N"
+F 7 "" H -50 600 50  0001 C CNN "Manufacturer"
+	1    750  7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L TP4056:TP4056 U5
+U 1 1 5C3AC889
+P 2400 7200
+F 0 "U5" H 2150 7550 45  0000 C CNN
+F 1 "TP4056" H 2250 6800 45  0000 C CNN
+F 2 "Package_SO:SOP-8_3.76x4.96mm_P1.27mm" H 2400 7200 45  0001 C CNN
+F 3 "" H 2400 7200 45  0001 C CNN
+F 4 "" H 2400 7200 50  0001 C CNN "Manufacturer P/N"
+F 5 "DIOO Microcircuits" H 0   0   50  0001 C CNN "Manufacturer"
+F 6 "DIO5158" H 0   0   50  0001 C CNN "Manufacturer Part Number"
+	1    2400 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR028
+U 1 1 5C3ACF1E
+P 750 7600
+F 0 "#PWR028" H 750 7350 50  0001 C CNN
+F 1 "GNDD" H 750 7475 50  0000 C CNN
+F 2 "" H 750 7600 50  0001 C CNN
+F 3 "" H 750 7600 50  0001 C CNN
+	1    750  7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5C3AD1B4
+P 1200 7100
+F 0 "C5" H 1225 7200 50  0000 L CNN
+F 1 "100nF" H 1225 7000 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1238 6950 50  0001 C CNN
+F 3 "" H 1200 7100 50  0001 C CNN
+F 4 "" H 1200 7100 60  0001 C CNN "Manufacturer P/N"
+F 5 "" H 1200 7100 60  0001 C CNN "Supplier P/N"
+F 6 "" H 1200 7100 60  0001 C CNN "Supplier"
+F 7 "KEMET" H -50 600 50  0001 C CNN "Manufacturer"
+F 8 "C0603C104J5RACTU" H 0   0   50  0001 C CNN "Manufacturer Part Number"
+	1    1200 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR025
+U 1 1 5C3AD73D
+P 1200 7300
+F 0 "#PWR025" H 1200 7050 50  0001 C CNN
+F 1 "GNDD" H 1200 7175 50  0000 C CNN
+F 2 "" H 1200 7300 50  0001 C CNN
+F 3 "" H 1200 7300 50  0001 C CNN
+	1    1200 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR024
+U 1 1 5C3ADEBB
+P 1850 7250
+F 0 "#PWR024" H 1850 7000 50  0001 C CNN
+F 1 "GNDD" V 1750 7200 50  0000 C CNN
+F 2 "" H 1850 7250 50  0001 C CNN
+F 3 "" H 1850 7250 50  0001 C CNN
+	1    1850 7250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDD #PWR027
+U 1 1 5C3AE618
+P 3300 7450
+F 0 "#PWR027" H 3300 7200 50  0001 C CNN
+F 1 "GNDD" H 3300 7325 50  0000 C CNN
+F 2 "" H 3300 7450 50  0001 C CNN
+F 3 "" H 3300 7450 50  0001 C CNN
+	1    3300 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR023
+U 1 1 5C3AFAA1
+P 2950 6900
+F 0 "#PWR023" H 2950 6750 50  0001 C CNN
+F 1 "+BATT" H 2950 7040 50  0000 C CNN
+F 2 "" H 2950 6900 50  0001 C CNN
+F 3 "" H 2950 6900 50  0001 C CNN
+	1    2950 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR026
+U 1 1 5C3AFE4D
+P 4900 7350
+F 0 "#PWR026" H 4900 7100 50  0001 C CNN
+F 1 "GNDD" H 4900 7225 50  0000 C CNN
+F 2 "" H 4900 7350 50  0001 C CNN
+F 3 "" H 4900 7350 50  0001 C CNN
+	1    4900 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR013
+U 1 1 5C3B0211
+P 950 2200
+F 0 "#PWR013" H 950 2050 50  0001 C CNN
+F 1 "+BATT" V 950 2450 50  0000 C CNN
+F 2 "" H 950 2200 50  0001 C CNN
+F 3 "" H 950 2200 50  0001 C CNN
+	1    950  2200
+	0    -1   -1   0   
+$EndComp
+Text Notes 1150 6600 0    197  ~ 0
+Battery Charger
+Wire Wire Line
+	5150 1300 4900 1300
+Wire Wire Line
+	5150 1400 4900 1400
+Wire Wire Line
+	5150 1500 4900 1500
+Wire Wire Line
+	5650 1300 5900 1300
+Wire Wire Line
+	5650 1400 5900 1400
+Wire Wire Line
+	5650 1500 5900 1500
+Wire Wire Line
+	4400 4150 4300 4150
+Wire Wire Line
+	4400 4050 4300 4050
+Wire Wire Line
+	4300 4050 4300 4150
+Connection ~ 4300 4150
+Wire Wire Line
+	4300 4250 4400 4250
+Wire Wire Line
+	4350 1950 4350 2000
+Wire Wire Line
+	4350 2000 4250 2000
+Wire Wire Line
+	4350 2050 4400 2050
+Connection ~ 4350 2000
+Wire Wire Line
+	6400 3200 6300 3200
+Wire Wire Line
+	6400 3300 6300 3300
+Wire Wire Line
+	6300 3400 6400 3400
+Wire Wire Line
+	6400 2250 6300 2250
+Wire Wire Line
+	6400 2350 6300 2350
+Wire Wire Line
+	6400 2450 6300 2450
+Wire Wire Line
+	750  7600 750  7550
+Wire Wire Line
+	1050 6950 1200 6950
+Connection ~ 1200 6950
+Wire Wire Line
+	1200 7300 1200 7250
+Wire Wire Line
+	1900 7250 1850 7250
+Wire Wire Line
+	1900 7050 1800 7050
+Wire Wire Line
+	1800 7050 1800 6950
+Connection ~ 1800 6950
+Wire Wire Line
+	2900 7400 2850 7400
+Wire Wire Line
+	2850 7300 3300 7300
+Wire Wire Line
+	3300 7300 3300 7400
+Wire Wire Line
+	3200 7400 3300 7400
+Connection ~ 3300 7400
+Wire Wire Line
+	2850 6950 2950 6950
+Wire Wire Line
+	3350 6950 3400 6950
+Wire Wire Line
+	2950 6900 2950 6950
+Connection ~ 2950 6950
+Wire Wire Line
+	3500 7300 3500 7250
+Wire Wire Line
+	1100 2200 950  2200
+Wire Wire Line
+	1000 2100 1100 2100
+$Comp
+L Device:C C6
+U 1 1 5C3BB279
+P 3500 7100
+F 0 "C6" H 3525 7200 50  0000 L CNN
+F 1 "100nF" H 3525 7000 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3538 6950 50  0001 C CNN
+F 3 "" H 3500 7100 50  0001 C CNN
+F 4 "" H 3500 7100 60  0001 C CNN "Manufacturer P/N"
+F 5 "" H 3500 7100 60  0001 C CNN "Supplier P/N"
+F 6 "" H 3500 7100 60  0001 C CNN "Supplier"
+F 7 "KEMET" H -50 600 50  0001 C CNN "Manufacturer"
+F 8 "C0603C104J5RACTU" H 0   0   50  0001 C CNN "Manufacturer Part Number"
+	1    3500 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 4150 4200 4150
+Wire Wire Line
+	4300 4150 4300 4250
+Wire Wire Line
+	4350 2000 4350 2050
+Wire Wire Line
+	1800 6950 1900 6950
+Wire Wire Line
+	3300 7400 3300 7450
+Wire Wire Line
+	2950 6950 3000 6950
+Wire Wire Line
+	4400 1950 4350 1950
+$Comp
+L Device:R R15
+U 1 1 5C6754F7
+P 3050 7400
+F 0 "R15" H 3150 7550 50  0000 C CNN
+F 1 "2k" V 3050 7400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2980 7400 50  0001 C CNN
+F 3 "" H 3050 7400 50  0001 C CNN
+F 4 "" H 3050 7400 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 3050 7400 50  0001 C CNN "Supplier"
+F 6 "" H 3050 7400 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H -50 600 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H 0   0   50  0001 C CNN "Manufacturer Part Number"
+	1    3050 7400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5C676C45
+P 3200 6950
+F 0 "R12" V 3280 6950 50  0000 C CNN
+F 1 "2k" V 3200 6950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3130 6950 50  0001 C CNN
+F 3 "" H 3200 6950 50  0001 C CNN
+F 4 "" V 3200 6950 50  0001 C CNN "Manufacturer P/N"
+F 5 "" V 3200 6950 50  0001 C CNN "Supplier"
+F 6 "" V 3200 6950 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H -50 600 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H 0   0   50  0001 C CNN "Manufacturer Part Number"
+	1    3200 6950
+	0    1    1    0   
+$EndComp
+Text GLabel 11050 1450 2    45   Input ~ 0
+3.3V
+$Comp
+L power:GNDD #PWR014
+U 1 1 5CA13DBF
+P 11000 1550
+F 0 "#PWR014" H 11000 1300 50  0001 C CNN
+F 1 "GNDD" H 11000 1425 50  0000 C CNN
+F 2 "" H 11000 1550 50  0001 C CNN
+F 3 "" H 11000 1550 50  0001 C CNN
+	1    11000 1550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L HM-11:HM-11 U3
+U 1 1 5CA21747
+P 10500 1700
+F 0 "U3" H 10500 2264 45  0000 C CNN
+F 1 "HM-11" H 10500 2180 45  0000 C CNN
+F 2 "HM-11:HM-11" H 10450 1700 45  0001 C CNN
+F 3 "" H 10450 1700 45  0001 C CNN
+F 4 "" H 600 -1400 50  0001 C CNN "Manufacturer P/N"
+F 5 "Seed" H 50  -800 50  0001 C CNN "Manufacturer"
+F 6 "HM-11" H -200 -1050 50  0001 C CNN "Manufacturer Part Number"
+	1    10500 1700
+	-1   0    0    -1  
+$EndComp
+Text GLabel 1850 5650 3    45   Input ~ 0
+SCL
+Text GLabel 1750 5650 3    45   Input ~ 0
+SDA
+$Comp
+L Device:R R3
+U 1 1 5CAE4431
+P 1850 5400
+F 0 "R3" V 1930 5400 50  0000 C CNN
+F 1 "10k" V 1850 5400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1780 5400 50  0001 C CNN
+F 3 "" H 1850 5400 50  0001 C CNN
+F 4 "" V 1850 5400 50  0001 C CNN "Manufacturer P/N"
+F 5 "Macrofab" V 1850 5400 50  0001 C CNN "Supplier"
+F 6 "MF-RES-0603-10K" V 1850 5400 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H -8700 3300 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ103V" H -9250 4350 50  0001 C CNN "Manufacturer Part Number"
+	1    1850 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5CAE466F
+P 1750 5400
+F 0 "R2" V 1650 5400 50  0000 C CNN
+F 1 "10k" V 1750 5400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1680 5400 50  0001 C CNN
+F 3 "" H 1750 5400 50  0001 C CNN
+F 4 "" V 1750 5400 50  0001 C CNN "Manufacturer P/N"
+F 5 "Macrofab" V 1750 5400 50  0001 C CNN "Supplier"
+F 6 "MF-RES-0603-10K" V 1750 5400 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H -8800 3200 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ103V" H -9250 4350 50  0001 C CNN "Manufacturer Part Number"
+	1    1750 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 5550 1850 5650
+Wire Wire Line
+	1750 5550 1750 5650
+Wire Wire Line
+	1800 5100 1800 5150
+Wire Wire Line
+	1800 5150 1850 5150
+Wire Wire Line
+	1850 5150 1850 5250
+Wire Wire Line
+	1750 5250 1750 5150
+Wire Wire Line
+	1750 5150 1800 5150
+Connection ~ 1800 5150
+Wire Wire Line
+	1200 6950 1550 6950
+Text GLabel 1500 6950 1    50   Input ~ 0
+VUSB
+$Comp
+L Device:D_Zener D3
+U 1 1 5D1A876C
+P 3850 3550
+F 0 "D3" V 3804 3629 50  0000 L CNN
+F 1 "D_Zener" V 3895 3629 50  0000 L CNN
+F 2 "Diode_SMD:SC-90A" H 3850 3550 50  0001 C CNN
+F 3 "~" H 3850 3550 50  0001 C CNN
+F 4 "Panasonic" H -1250 150 50  0001 C CNN "Manufacturer"
+F 5 "" H -1250 150 50  0001 C CNN "Manufacturer P/N"
+F 6 "DZ2J027M0L" H -2600 700 50  0001 C CNN "Manufacturer Part Number"
+	1    3850 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDD #PWR016
+U 1 1 5D1A9395
+P 6900 3950
+F 0 "#PWR016" H 6900 3700 50  0001 C CNN
+F 1 "GNDD" H 6900 3825 50  0000 C CNN
+F 2 "" H 6900 3950 50  0001 C CNN
+F 3 "" H 6900 3950 50  0001 C CNN
+	1    6900 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5D1BCEEC
+P 3850 3150
+F 0 "R7" V 3930 3150 50  0000 C CNN
+F 1 "47" V 3850 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3780 3150 50  0001 C CNN
+F 3 "" H 3850 3150 50  0001 C CNN
+F 4 "" V 3850 3150 50  0001 C CNN "Manufacturer P/N"
+F 5 "Panasonic" H 1800 850 50  0001 C CNN "Manufacturer"
+F 6 "Macrofab" H -2600 700 50  0001 C CNN "Supplier"
+F 7 "MF-RES-0603-47" H -2600 700 50  0001 C CNN "Supplier P/N"
+F 8 "ERJ-3GEYJ470V" H -2600 700 50  0001 C CNN "Manufacturer Part Number"
+	1    3850 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 2900 3850 3000
+Wire Wire Line
+	3850 3300 3850 3400
+Wire Wire Line
+	4400 3400 3850 3400
+$Comp
+L Regulator_Linear:TLV70233_SOT23-5 U1
+U 1 1 5CBEEB2B
+P 1700 1350
+F 0 "U1" H 1700 1692 50  0000 C CNN
+F 1 "TLV70233_SOT23-5" H 1700 1601 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1700 1675 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv702.pdf" H 1700 1400 50  0001 C CNN
+F 4 "Texas Instruments" H -3550 -2350 50  0001 C CNN "Manufacturer"
+F 5 "" H -3550 -2350 50  0001 C CNN "Manufacturer P/N"
+F 6 "Macrofab" H -3550 -2350 50  0001 C CNN "Supplier"
+F 7 "MF-REG-SOT235-3.3V-300mA" H -3550 -2350 50  0001 C CNN "Supplier P/N"
+F 8 "TLV70233DBVR" H -2050 -4250 50  0001 C CNN "Manufacturer Part Number"
+	1    1700 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 1250 1250 1250
+Wire Wire Line
+	1400 1350 1300 1350
+Wire Wire Line
+	1250 1350 1250 1250
+Connection ~ 1250 1250
+Wire Wire Line
+	1250 1250 1400 1250
+$Comp
+L power:GNDD #PWR08
+U 1 1 5CC1905F
+P 1700 1700
+F 0 "#PWR08" H 1700 1450 50  0001 C CNN
+F 1 "GNDD" H 1700 1575 50  0000 C CNN
+F 2 "" H 1700 1700 50  0001 C CNN
+F 3 "" H 1700 1700 50  0001 C CNN
+	1    1700 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 1700 1700 1650
+Text GLabel 2200 1250 1    50   Input ~ 0
+3.3V
+$Comp
+L Device:C C2
+U 1 1 5CC4446B
+P 1300 1500
+F 0 "C2" H 1325 1600 50  0000 L CNN
+F 1 "100nF" H 1325 1400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1338 1350 50  0001 C CNN
+F 3 "" H 1300 1500 50  0001 C CNN
+F 4 "" H 1300 1500 60  0001 C CNN "Manufacturer P/N"
+F 5 "" H 1300 1500 60  0001 C CNN "Supplier P/N"
+F 6 "" H 1300 1500 60  0001 C CNN "Supplier"
+F 7 "KEMET" H -3900 -3300 50  0001 C CNN "Manufacturer"
+F 8 "C0603C104J5RACTU" H -2050 -4250 50  0001 C CNN "Manufacturer Part Number"
+	1    1300 1500
+	1    0    0    -1  
+$EndComp
+Connection ~ 1300 1350
+Wire Wire Line
+	1300 1350 1250 1350
+$Comp
+L Device:C C1
+U 1 1 5CC445C3
+P 2050 1400
+F 0 "C1" H 2075 1500 50  0000 L CNN
+F 1 "100nF" H 2075 1300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2088 1250 50  0001 C CNN
+F 3 "" H 2050 1400 50  0001 C CNN
+F 4 "" H 2050 1400 60  0001 C CNN "Manufacturer P/N"
+F 5 "" H 2050 1400 60  0001 C CNN "Supplier P/N"
+F 6 "" H 2050 1400 60  0001 C CNN "Supplier"
+F 7 "KEMET" H -3150 -3400 50  0001 C CNN "Manufacturer"
+F 8 "C0603C104J5RACTU" H -2050 -4250 50  0001 C CNN "Manufacturer Part Number"
+	1    2050 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 2050 1250
+Wire Wire Line
+	2050 1250 2000 1250
+$Comp
+L power:GNDD #PWR09
+U 1 1 5CC44679
+P 2050 1700
+F 0 "#PWR09" H 2050 1450 50  0001 C CNN
+F 1 "GNDD" H 2050 1575 50  0000 C CNN
+F 2 "" H 2050 1700 50  0001 C CNN
+F 3 "" H 2050 1700 50  0001 C CNN
+	1    2050 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR07
+U 1 1 5CC5A5DB
+P 1300 1700
+F 0 "#PWR07" H 1300 1450 50  0001 C CNN
+F 1 "GNDD" H 1300 1575 50  0000 C CNN
+F 2 "" H 1300 1700 50  0001 C CNN
+F 3 "" H 1300 1700 50  0001 C CNN
+	1    1300 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1700 1300 1650
+Wire Wire Line
+	11000 1550 10950 1550
+Text GLabel 1250 1250 1    50   Input ~ 0
+VIN
+$Comp
+L Device:R R6
+U 1 1 5CD50E85
+P 6900 3400
+F 0 "R6" H 7000 3550 50  0000 C CNN
+F 1 "2k" V 6900 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6830 3400 50  0001 C CNN
+F 3 "" H 6900 3400 50  0001 C CNN
+F 4 "" H 6900 3400 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 6900 3400 50  0001 C CNN "Supplier"
+F 6 "" H 6900 3400 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H 3050 -3300 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H -50 1000 50  0001 C CNN "Manufacturer Part Number"
+	1    6900 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5CD51315
+P 6900 3750
+F 0 "R8" H 6800 3900 50  0000 C CNN
+F 1 "2k" V 6900 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6830 3750 50  0001 C CNN
+F 3 "" H 6900 3750 50  0001 C CNN
+F 4 "" H 6900 3750 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 6900 3750 50  0001 C CNN "Supplier"
+F 6 "" H 6900 3750 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H 3050 -2950 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H -50 850 50  0001 C CNN "Manufacturer Part Number"
+	1    6900 3750
+	-1   0    0    1   
+$EndComp
+Text GLabel 6900 3200 1    50   Input ~ 0
+VUSB
+Wire Wire Line
+	6900 3200 6900 3250
+$Comp
+L Device:LED D7
+U 1 1 5CDC4646
+P 1700 7650
+F 0 "D7" H 1800 7600 50  0000 C CNN
+F 1 "LED" H 1700 7750 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 1700 7650 50  0001 C CNN
+F 3 "~" H 1700 7650 50  0001 C CNN
+F 4 "Lite-On" H 0   250 50  0001 C CNN "Manufacturer"
+F 5 "" H 0   250 50  0001 C CNN "Manufacturer P/N"
+F 6 "Macrofab" H 0   250 50  0001 C CNN "Supplier"
+F 7 "MF-LED-0603-GREEN" H 0   250 50  0001 C CNN "Supplier P/N"
+F 8 "LTST-C190KGKT" H 0   0   50  0001 C CNN "Manufacturer Part Number"
+	1    1700 7650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 5CDC47B0
+P 1700 7400
+F 0 "D6" H 1800 7350 50  0000 C CNN
+F 1 "LED" H 1700 7500 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 1700 7400 50  0001 C CNN
+F 3 "~" H 1700 7400 50  0001 C CNN
+F 4 "Lite-On" H 0   -250 50  0001 C CNN "Manufacturer"
+F 5 "" H 0   -250 50  0001 C CNN "Manufacturer P/N"
+F 6 "Macrofab" H 0   -250 50  0001 C CNN "Supplier"
+F 7 "MF-LED-0603-RED" H 0   -250 50  0001 C CNN "Supplier P/N"
+F 8 "LTST-C190KRKT" H 0   0   50  0001 C CNN "Manufacturer Part Number"
+	1    1700 7400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 5CDC4FB7
+P 1550 7150
+F 0 "R14" H 1650 7300 50  0000 C CNN
+F 1 "2k" V 1550 7150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1480 7150 50  0001 C CNN
+F 3 "" H 1550 7150 50  0001 C CNN
+F 4 "" H 1550 7150 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 1550 7150 50  0001 C CNN "Supplier"
+F 6 "" H 1550 7150 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H -1550 350 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H 0   0   50  0001 C CNN "Manufacturer Part Number"
+	1    1550 7150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 7000 1550 6950
+Connection ~ 1550 6950
+Wire Wire Line
+	1550 6950 1800 6950
+Wire Wire Line
+	1550 7300 1550 7400
+Wire Wire Line
+	1550 7400 1550 7650
+Connection ~ 1550 7400
+Wire Wire Line
+	1850 7400 1900 7400
+Wire Wire Line
+	1850 7650 1900 7650
+Wire Wire Line
+	1900 7650 1900 7500
+Wire Wire Line
+	11050 1450 10950 1450
+$Comp
+L Device:LED D4
+U 1 1 5CF145BF
+P 10200 2350
+F 0 "D4" H 10300 2300 50  0000 C CNN
+F 1 "LED" H 10200 2450 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 10200 2350 50  0001 C CNN
+F 3 "~" H 10200 2350 50  0001 C CNN
+F 4 "Lite-On" H 8500 -5050 50  0001 C CNN "Manufacturer"
+F 5 "" H 8500 -5050 50  0001 C CNN "Manufacturer P/N"
+F 6 "Macrofab" H 8500 -5050 50  0001 C CNN "Supplier"
+F 7 "MF-LED-0603-GREEN" H 8500 -5050 50  0001 C CNN "Supplier P/N"
+F 8 "LTST-C190KGKT" H 700 -850 50  0001 C CNN "Manufacturer Part Number"
+	1    10200 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5CF14791
+P 10200 2750
+F 0 "R9" H 10300 2900 50  0000 C CNN
+F 1 "2k" V 10200 2750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10130 2750 50  0001 C CNN
+F 3 "" H 10200 2750 50  0001 C CNN
+F 4 "" H 10200 2750 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 10200 2750 50  0001 C CNN "Supplier"
+F 6 "" H 10200 2750 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H 8950 -2300 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H 700 -850 50  0001 C CNN "Manufacturer Part Number"
+	1    10200 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10200 2500 10200 2600
+$Comp
+L power:GNDD #PWR020
+U 1 1 5CF2BDC1
+P 10200 2950
+F 0 "#PWR020" H 10200 2700 50  0001 C CNN
+F 1 "GNDD" H 10200 2825 50  0000 C CNN
+F 2 "" H 10200 2950 50  0001 C CNN
+F 3 "" H 10200 2950 50  0001 C CNN
+	1    10200 2950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 2950 10200 2900
+$Comp
+L Device:R R10
+U 1 1 5CF435D2
+P 8050 4500
+F 0 "R10" H 8150 4650 50  0000 C CNN
+F 1 "2k" V 8050 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7980 4500 50  0001 C CNN
+F 3 "" H 8050 4500 50  0001 C CNN
+F 4 "" H 8050 4500 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 8050 4500 50  0001 C CNN "Supplier"
+F 6 "" H 8050 4500 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H 6800 -550 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H -1200 650 50  0001 C CNN "Manufacturer Part Number"
+	1    8050 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5CF436C2
+P 8050 4150
+F 0 "D5" H 8150 4100 50  0000 C CNN
+F 1 "LED" H 8050 4250 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 8050 4150 50  0001 C CNN
+F 3 "~" H 8050 4150 50  0001 C CNN
+F 4 "Lite-On" H 6350 -3250 50  0001 C CNN "Manufacturer"
+F 5 "" H 6350 -3250 50  0001 C CNN "Manufacturer P/N"
+F 6 "Macrofab" H 6350 -3250 50  0001 C CNN "Supplier"
+F 7 "MF-LED-0603-GREEN" H 6350 -3250 50  0001 C CNN "Supplier P/N"
+F 8 "LTST-C190KGKT" H -1200 650 50  0001 C CNN "Manufacturer Part Number"
+	1    8050 4150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8050 4300 8050 4350
+$Comp
+L battery_management:AP9211 U4
+U 1 1 5CFA0793
+P 4350 7050
+F 0 "U4" H 4300 7375 50  0000 C CNN
+F 1 "AP9211" H 4300 7284 50  0000 C CNN
+F 2 "DFN:U-DFN2030-6" H 4400 7050 50  0001 C CNN
+F 3 "" H 4400 7050 50  0001 C CNN
+F 4 "Diodes Incorporated" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "" H 0   0   50  0001 C CNN "Manufacturer P/N"
+F 6 "AP9211S-AN-HAC-7" H 0   0   50  0001 C CNN "Manufacturer Part Number"
+	1    4350 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 6950 3500 6950
+Connection ~ 3500 6950
+Wire Wire Line
+	3850 7100 3850 7300
+Wire Wire Line
+	3850 7400 4300 7400
+Wire Wire Line
+	4300 7400 4300 7350
+Wire Wire Line
+	3500 7300 3850 7300
+Connection ~ 3850 7300
+Wire Wire Line
+	3850 7300 3850 7400
+Text GLabel 1000 2100 0    50   Input ~ 0
+-BATT
+Text GLabel 3500 7300 3    50   Input ~ 0
+-BATT
+$Comp
+L Device:R R13
+U 1 1 5CFF8AED
+P 4850 7100
+F 0 "R13" H 4950 7250 50  0000 C CNN
+F 1 "2k" V 4850 7100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4780 7100 50  0001 C CNN
+F 3 "" H 4850 7100 50  0001 C CNN
+F 4 "" H 4850 7100 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 4850 7100 50  0001 C CNN "Supplier"
+F 6 "" H 4850 7100 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H 1750 300 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H 0   0   50  0001 C CNN "Manufacturer Part Number"
+	1    4850 7100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4750 6950 4850 6950
+Wire Wire Line
+	4850 7250 4850 7350
+Wire Wire Line
+	4850 7350 4900 7350
+Wire Wire Line
+	4500 7350 4850 7350
+Connection ~ 4850 7350
+$Comp
+L power:GNDD #PWR021
+U 1 1 5D03E611
+P 8050 4700
+F 0 "#PWR021" H 8050 4450 50  0001 C CNN
+F 1 "GNDD" H 8050 4575 50  0000 C CNN
+F 2 "" H 8050 4700 50  0001 C CNN
+F 3 "" H 8050 4700 50  0001 C CNN
+	1    8050 4700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4700 8050 4650
+$Comp
+L audio_conn:Conn_01x02_Female J2
+U 1 1 5CE1E2C9
+P 1300 2100
+F 0 "J2" H 1327 2076 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 1050 1950 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 1300 2100 50  0001 C CNN
+F 3 "~" H 1300 2100 50  0001 C CNN
+F 4 "JST Sales America" H -4950 -5150 50  0001 C CNN "Manufacturer"
+F 5 "" H -4950 -5150 50  0001 C CNN "Manufacturer P/N"
+F 6 "S2B-PH-SM4-TB" H -4950 -5150 50  0001 C CNN "Manufacturer Part Number"
+	1    1300 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1950 10050 1950
+Wire Wire Line
+	3850 3700 3850 3800
+Wire Wire Line
+	4350 3750 4350 3800
+Wire Wire Line
+	10000 1950 10000 2200
+Wire Wire Line
+	10200 2200 10000 2200
+Connection ~ 3850 3400
+Text GLabel 9900 1450 0    45   Input ~ 0
+BTTX
+Text GLabel 6400 3550 2    45   Input ~ 0
+BTTX
+Wire Wire Line
+	6400 3550 6300 3550
+Text GLabel 6400 3750 2    45   Input ~ 0
+BTTX
+Wire Wire Line
+	6400 3750 6300 3750
+Text GLabel 9800 1650 0    45   Input ~ 0
+BTRX
+Text GLabel 6400 3650 2    45   Input ~ 0
+BTRX
+Wire Wire Line
+	6400 3650 6300 3650
+$Comp
+L Transistor_BJT:MMBT3904 Q1
+U 1 1 5D342D7A
+P 9350 1900
+F 0 "Q1" V 9678 1900 50  0000 C CNN
+F 1 "MMBT3904" V 9587 1900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9550 1825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 9350 1900 50  0001 L CNN
+F 4 "ON Semiconductor" H 4500 -2850 50  0001 C CNN "Manufacturer"
+F 5 "" H 4500 -2850 50  0001 C CNN "Manufacturer P/N"
+F 6 "Macrofab" H 4500 -2850 50  0001 C CNN "Supplier"
+F 7 "MF-DSC-SOT233-MMBT3904" H 4500 -2850 50  0001 C CNN "Supplier P/N"
+F 8 "MMBT3904LT1G" H 6650 -2500 50  0001 C CNN "Manufacturer Part Number"
+	1    9350 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GNDD #PWR06
+U 1 1 5D34314A
+P 9600 1850
+F 0 "#PWR06" H 9600 1600 50  0001 C CNN
+F 1 "GNDD" H 9600 1725 50  0000 C CNN
+F 2 "" H 9600 1850 50  0001 C CNN
+F 3 "" H 9600 1850 50  0001 C CNN
+	1    9600 1850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 1850 9600 1800
+Wire Wire Line
+	9600 1800 9550 1800
+Text GLabel 8700 1800 0    45   Input ~ 0
+RST
+Wire Wire Line
+	9900 1450 10050 1450
+$Comp
+L Device:R R5
+U 1 1 5D3A95F2
+P 9350 2350
+F 0 "R5" V 9250 2350 50  0000 C CNN
+F 1 "2k" V 9350 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9280 2350 50  0001 C CNN
+F 3 "" H 9350 2350 50  0001 C CNN
+F 4 "" H 9350 2350 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 9350 2350 50  0001 C CNN "Supplier"
+F 6 "" H 9350 2350 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H 8100 -2700 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H -500 -350 50  0001 C CNN "Manufacturer Part Number"
+	1    9350 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9350 2100 9350 2200
+$Comp
+L Device:R R11
+U 1 1 5D478093
+P 3200 6850
+F 0 "R11" V 3100 6850 50  0000 C CNN
+F 1 "2k" V 3200 6850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3130 6850 50  0001 C CNN
+F 3 "" H 3200 6850 50  0001 C CNN
+F 4 "" V 3200 6850 50  0001 C CNN "Manufacturer P/N"
+F 5 "" V 3200 6850 50  0001 C CNN "Supplier"
+F 6 "" V 3200 6850 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H -50 500 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H 0   -100 50  0001 C CNN "Manufacturer Part Number"
+	1    3200 6850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 6850 3000 6850
+Wire Wire Line
+	3000 6850 3000 6950
+Connection ~ 3000 6950
+Wire Wire Line
+	3000 6950 3050 6950
+Wire Wire Line
+	3350 6850 3400 6850
+Wire Wire Line
+	3400 6850 3400 6950
+Connection ~ 3400 6950
+Wire Wire Line
+	3400 6950 3500 6950
+Text GLabel 3850 2900 1    50   Input ~ 0
+VIN
+Text Notes 1550 850  0    197  ~ 0
+Power
+$Comp
+L power:GNDD #PWR015
+U 1 1 5FC4E390
+P 3850 3800
+F 0 "#PWR015" H 3850 3550 50  0001 C CNN
+F 1 "GNDD" H 3850 3675 50  0000 C CNN
+F 2 "" H 3850 3800 50  0001 C CNN
+F 3 "" H 3850 3800 50  0001 C CNN
+	1    3850 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR012
+U 1 1 5FC5E7FD
+P 700 1350
+F 0 "#PWR012" H 700 1200 50  0001 C CNN
+F 1 "+BATT" H 700 1490 50  0000 C CNN
+F 2 "" H 700 1350 50  0001 C CNN
+F 3 "" H 700 1350 50  0001 C CNN
+	1    700  1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GNDD #PWR05
+U 1 1 5FC5EB00
+P 3250 1250
+F 0 "#PWR05" H 3250 1000 50  0001 C CNN
+F 1 "GNDD" H 3250 1125 50  0000 C CNN
+F 2 "" H 3250 1250 50  0001 C CNN
+F 3 "" H 3250 1250 50  0001 C CNN
+	1    3250 1250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5FC5EC1A
+P 2550 1250
+F 0 "D2" H 2650 1200 50  0000 C CNN
+F 1 "LED" H 2550 1350 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 2550 1250 50  0001 C CNN
+F 3 "~" H 2550 1250 50  0001 C CNN
+F 4 "Lite-On" H 850 -6150 50  0001 C CNN "Manufacturer"
+F 5 "" H 850 -6150 50  0001 C CNN "Manufacturer P/N"
+F 6 "Macrofab" H 850 -6150 50  0001 C CNN "Supplier"
+F 7 "MF-LED-0603-GREEN" H 850 -6150 50  0001 C CNN "Supplier P/N"
+F 8 "LTST-C190KGKT" H -6700 -2250 50  0001 C CNN "Manufacturer Part Number"
+	1    2550 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 5FC647D4
+P 1050 1250
+F 0 "SW1" V 1004 1398 50  0000 L CNN
+F 1 "SW_SPDT" V 1095 1398 50  0000 L CNN
+F 2 "Switches:JS102011SAQN" H 1050 1250 50  0001 C CNN
+F 3 "" H 1050 1250 50  0001 C CNN
+F 4 "401-1999-1-ND" V 1050 1250 50  0001 C CNN "Supplier P/N"
+F 5 "Digikey" V 1050 1250 50  0001 C CNN "Supplier"
+F 6 "JS102011SAQN" V 1050 1250 50  0001 C CNN "Manufacturer Part Number"
+F 7 "C&K Switches" V 1050 1250 50  0001 C CNN "Manufacturer"
+	1    1050 1250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	700  1350 850  1350
+$Comp
+L Device:R R4
+U 1 1 5FC83BFE
+P 2900 1250
+F 0 "R4" H 3000 1400 50  0000 C CNN
+F 1 "2k" V 2900 1250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2830 1250 50  0001 C CNN
+F 3 "" H 2900 1250 50  0001 C CNN
+F 4 "" H 2900 1250 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 2900 1250 50  0001 C CNN "Supplier"
+F 6 "" H 2900 1250 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H -950 -5450 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H -4050 -1150 50  0001 C CNN "Manufacturer Part Number"
+	1    2900 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDD #PWR01
+U 1 1 5FC901E6
+P 4900 1300
+F 0 "#PWR01" H 4900 1050 50  0001 C CNN
+F 1 "GNDD" H 4900 1175 50  0000 C CNN
+F 2 "" H 4900 1300 50  0001 C CNN
+F 3 "" H 4900 1300 50  0001 C CNN
+	1    4900 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5FC9734F
+P 8350 4150
+F 0 "D1" H 8450 4100 50  0000 C CNN
+F 1 "LED" H 8350 4250 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 8350 4150 50  0001 C CNN
+F 3 "~" H 8350 4150 50  0001 C CNN
+F 4 "Lite-On" H 6650 -3250 50  0001 C CNN "Manufacturer"
+F 5 "" H 6650 -3250 50  0001 C CNN "Manufacturer P/N"
+F 6 "Macrofab" H 6650 -3250 50  0001 C CNN "Supplier"
+F 7 "MF-LED-0603-GREEN" H 6650 -3250 50  0001 C CNN "Supplier P/N"
+F 8 "LTST-C190KGKT" H -900 650 50  0001 C CNN "Manufacturer Part Number"
+	1    8350 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FC97439
+P 8350 4500
+F 0 "R1" H 8450 4650 50  0000 C CNN
+F 1 "2k" V 8350 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8280 4500 50  0001 C CNN
+F 3 "" H 8350 4500 50  0001 C CNN
+F 4 "" H 8350 4500 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 8350 4500 50  0001 C CNN "Supplier"
+F 6 "" H 8350 4500 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H 4500 -2200 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H 1400 2100 50  0001 C CNN "Manufacturer Part Number"
+	1    8350 4500
+	-1   0    0    1   
+$EndComp
+Text GLabel 8350 3850 1    45   Input ~ 0
+SCK
+$Comp
+L power:GNDD #PWR02
+U 1 1 5FC975E3
+P 8350 4700
+F 0 "#PWR02" H 8350 4450 50  0001 C CNN
+F 1 "GNDD" H 8350 4575 50  0000 C CNN
+F 2 "" H 8350 4700 50  0001 C CNN
+F 3 "" H 8350 4700 50  0001 C CNN
+	1    8350 4700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR019
+U 1 1 5FCA9AA7
+P 1450 4000
+F 0 "#PWR019" H 1450 3750 50  0001 C CNN
+F 1 "GNDD" H 1450 3875 50  0000 C CNN
+F 2 "" H 1450 4000 50  0001 C CNN
+F 3 "" H 1450 4000 50  0001 C CNN
+	1    1450 4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 1550 3850 3    45   Input ~ 0
+SCL
+Text GLabel 1650 3850 3    45   Input ~ 0
+SDA
+Text GLabel 2050 3850 3    45   Input ~ 0
+MPU_INT
+Text GLabel 6400 3850 2    45   Input ~ 0
+MPU_INT
+Wire Wire Line
+	6400 3850 6300 3850
+Text Notes 650  3350 0    197  ~ 0
+Accelerometer\nI2C Interface
+$Comp
+L audio_conn:Conn_01x04_Female J4
+U 1 1 5FCB265D
+P 10750 6300
+F 0 "J4" V 10690 6012 50  0000 R CNN
+F 1 "Conn_01x04_Female" V 10599 6012 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 10750 6300 50  0001 C CNN
+F 3 "~" H 10750 6300 50  0001 C CNN
+	1    10750 6300
+	0    1    1    0   
+$EndComp
+Text GLabel 4250 2000 0    50   Input ~ 0
+3.3V
+Wire Wire Line
+	4400 2550 4350 2550
+Wire Wire Line
+	4350 2550 4350 2250
+Connection ~ 4350 2050
+Wire Wire Line
+	4400 2250 4350 2250
+Connection ~ 4350 2250
+Wire Wire Line
+	4350 2250 4350 2050
+Wire Wire Line
+	9800 1650 10050 1650
+Text GLabel 10850 6000 1    50   Input ~ 0
+3.3V
+$Comp
+L power:GNDD #PWR022
+U 1 1 5FCC5B69
+P 10750 5800
+F 0 "#PWR022" H 10750 5550 50  0001 C CNN
+F 1 "GNDD" H 10750 5675 50  0000 C CNN
+F 2 "" H 10750 5800 50  0001 C CNN
+F 3 "" H 10750 5800 50  0001 C CNN
+	1    10750 5800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1350 3850 1350 3800
+Wire Wire Line
+	1450 3800 1450 4000
+Wire Wire Line
+	1550 3800 1550 3850
+Wire Wire Line
+	1650 3850 1650 3800
+Wire Wire Line
+	2050 3800 2050 3850
+$Comp
+L audio_conn:Conn_01x08_Female J3
+U 1 1 5FCE2FEE
+P 1650 3600
+F 0 "J3" V 1815 3530 50  0000 C CNN
+F 1 "Conn_01x08_Female" V 1724 3530 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 1650 3600 50  0001 C CNN
+F 3 "~" H 1650 3600 50  0001 C CNN
+	1    1650 3600
+	0    -1   -1   0   
+$EndComp
+Text GLabel 10650 6000 1    45   Input ~ 0
+BTTX
+Text GLabel 10550 6000 1    45   Input ~ 0
+BTRX
+Wire Wire Line
+	10850 6100 10850 6000
+Wire Wire Line
+	10750 6100 10750 5800
+Wire Wire Line
+	10650 6100 10650 6000
+Wire Wire Line
+	10550 6100 10550 6000
+Text Notes 8550 5400 0    197  ~ 0
+Pin Breakouts
+Wire Wire Line
+	2050 1550 2050 1700
+Text GLabel 4900 1500 0    50   Input ~ 0
+3.3V
+Text GLabel 1350 3850 3    50   Input ~ 0
+3.3V
+Text GLabel 1800 5100 0    50   Input ~ 0
+3.3V
+$Comp
+L Device:R R17
+U 1 1 5FBD6A64
+P 9050 1650
+F 0 "R17" H 9150 1650 50  0000 C CNN
+F 1 "2k" V 9050 1650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8980 1650 50  0001 C CNN
+F 3 "" H 9050 1650 50  0001 C CNN
+F 4 "" H 9050 1650 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 9050 1650 50  0001 C CNN "Supplier"
+F 6 "" H 9050 1650 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H 5200 -5050 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H 2100 -750 50  0001 C CNN "Manufacturer Part Number"
+	1    9050 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5FBD6B22
+P 9050 1300
+F 0 "R16" H 9150 1300 50  0000 C CNN
+F 1 "2k" V 9050 1300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8980 1300 50  0001 C CNN
+F 3 "" H 9050 1300 50  0001 C CNN
+F 4 "" H 9050 1300 50  0001 C CNN "Manufacturer P/N"
+F 5 "" H 9050 1300 50  0001 C CNN "Supplier"
+F 6 "" H 9050 1300 50  0001 C CNN "Supplier P/N"
+F 7 "Panasonic" H 5200 -5400 50  0001 C CNN "Manufacturer"
+F 8 "ERJ-3GEYJ202V" H 2100 -1100 50  0001 C CNN "Manufacturer Part Number"
+	1    9050 1300
+	-1   0    0    1   
+$EndComp
+Text GLabel 9000 1150 0    50   Input ~ 0
+3.3V
+Wire Wire Line
+	9000 1150 9050 1150
+Wire Wire Line
+	9050 1450 9050 1500
+Wire Wire Line
+	9050 1800 9150 1800
+Connection ~ 9050 1800
+$Comp
+L Device:C C7
+U 1 1 5FBEF8D7
+P 8800 1650
+F 0 "C7" H 8825 1750 50  0000 L CNN
+F 1 "100nF" H 8825 1550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8838 1500 50  0001 C CNN
+F 3 "" H 8800 1650 50  0001 C CNN
+F 4 "" H 8800 1650 60  0001 C CNN "Manufacturer P/N"
+F 5 "" H 8800 1650 60  0001 C CNN "Supplier P/N"
+F 6 "" H 8800 1650 60  0001 C CNN "Supplier"
+F 7 "KEMET" H 3600 -3150 50  0001 C CNN "Manufacturer"
+F 8 "C0603C104J5RACTU" H 5450 -4100 50  0001 C CNN "Manufacturer Part Number"
+	1    8800 1650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8700 1800 8800 1800
+Wire Wire Line
+	8800 1800 9050 1800
+Connection ~ 8800 1800
+$Comp
+L power:GNDD #PWR03
+U 1 1 5FBFC61B
+P 8800 1450
+F 0 "#PWR03" H 8800 1200 50  0001 C CNN
+F 1 "GNDD" H 8800 1325 50  0000 C CNN
+F 2 "" H 8800 1450 50  0001 C CNN
+F 3 "" H 8800 1450 50  0001 C CNN
+	1    8800 1450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8800 1450 8800 1500
+Wire Wire Line
+	2050 1250 2400 1250
+Wire Wire Line
+	2700 1250 2750 1250
+Wire Wire Line
+	3050 1250 3250 1250
+Wire Wire Line
+	6900 3550 6900 3600
+Wire Wire Line
+	6900 3900 6900 3950
+Wire Wire Line
+	6300 4050 6800 4050
+Wire Wire Line
+	6800 4050 6800 3600
+Wire Wire Line
+	6800 3600 6900 3600
+Connection ~ 6900 3600
+Text GLabel 8050 3850 1    45   Input ~ 0
+MISO
+Text GLabel 10000 2200 0    50   Input ~ 0
+BT
+Text GLabel 4350 3300 0    50   Input ~ 0
+BT
+Wire Wire Line
+	4350 3300 4400 3300
+Text GLabel 7850 5950 1    50   Input ~ 0
+pin10
+Text GLabel 7950 5950 1    50   Input ~ 0
+pin11
+Wire Wire Line
+	6400 4150 6300 4150
+Wire Wire Line
+	7850 5950 7850 6050
+Wire Wire Line
+	7950 5950 7950 6050
+Text GLabel 8050 5950 1    50   Input ~ 0
+pin12
+Text GLabel 8150 5950 1    50   Input ~ 0
+pin13
+Text GLabel 8250 5950 1    50   Input ~ 0
+pin14
+Wire Wire Line
+	8050 5950 8050 6050
+Wire Wire Line
+	8150 5950 8150 6050
+Wire Wire Line
+	8250 5950 8250 6050
+Text GLabel 6400 4150 2    50   Input ~ 0
+pin10
+Text GLabel 6400 4250 2    50   Input ~ 0
+pin11
+Text GLabel 6400 1950 2    50   Input ~ 0
+pin12
+Text GLabel 6400 2050 2    50   Input ~ 0
+pin13
+Text GLabel 6400 2150 2    50   Input ~ 0
+pin14
+Wire Wire Line
+	6300 1950 6400 1950
+Wire Wire Line
+	6300 2050 6400 2050
+Wire Wire Line
+	6300 2150 6400 2150
+Text GLabel 6400 3100 2    50   Input ~ 0
+pin26
+Text GLabel 6400 3000 2    50   Input ~ 0
+pin25
+Text GLabel 6400 2900 2    50   Input ~ 0
+pin24
+Text GLabel 6400 2800 2    50   Input ~ 0
+pin23
+Wire Wire Line
+	6300 2800 6400 2800
+Wire Wire Line
+	6300 2900 6400 2900
+Wire Wire Line
+	6300 3000 6400 3000
+Wire Wire Line
+	6300 3100 6400 3100
+$Comp
+L audio_conn:Conn_01x05 J6
+U 1 1 5FCE8C57
+P 8050 6250
+F 0 "J6" V 7923 6530 50  0000 L CNN
+F 1 "Conn_01x05" V 8014 6530 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 8050 6250 50  0001 C CNN
+F 3 "~" H 8050 6250 50  0001 C CNN
+	1    8050 6250
+	0    1    1    0   
+$EndComp
+$Comp
+L audio_conn:Conn_01x04 J7
+U 1 1 5FCE8EFC
+P 9000 6250
+F 0 "J7" V 8873 6430 50  0000 L CNN
+F 1 "Conn_01x04" V 8964 6430 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 9000 6250 50  0001 C CNN
+F 3 "~" H 9000 6250 50  0001 C CNN
+	1    9000 6250
+	0    1    1    0   
+$EndComp
+Text GLabel 8800 5900 1    50   Input ~ 0
+pin23
+Text GLabel 8900 5900 1    50   Input ~ 0
+pin24
+Text GLabel 9000 5900 1    50   Input ~ 0
+pin25
+Text GLabel 9100 5900 1    50   Input ~ 0
+pin26
+Wire Wire Line
+	8800 5900 8800 6050
+Wire Wire Line
+	8900 5900 8900 6050
+Wire Wire Line
+	9000 5900 9000 6050
+Wire Wire Line
+	9100 5900 9100 6050
+Wire Wire Line
+	6400 4250 6300 4250
+Wire Wire Line
+	9750 1850 9750 2600
+Wire Wire Line
+	9750 2600 9350 2600
+Wire Wire Line
+	9350 2600 9350 2500
+Wire Wire Line
+	9750 1850 10050 1850
+Text Notes 800  4900 0    197  ~ 0
+I2C Pull Up
+Text Notes 9050 850  0    197  ~ 0
+Bluetooth
+Wire Wire Line
+	8050 3850 8050 4000
+Wire Wire Line
+	8350 3850 8350 4000
+Wire Wire Line
+	8350 4350 8350 4300
+Wire Wire Line
+	8350 4700 8350 4650
+Text Notes 7400 3500 0    197  ~ 0
+Status LEDs
+Wire Wire Line
+	6400 2550 6400 2500
+Wire Wire Line
+	6300 2550 6400 2550
+Wire Wire Line
+	6400 2650 6300 2650
+Wire Wire Line
+	6400 2700 6400 2650
+Wire Wire Line
+	7350 2700 7300 2700
+Wire Wire Line
+	7350 2500 7300 2500
+Wire Wire Line
+	6400 2500 6650 2500
+Wire Wire Line
+	7000 2500 6650 2500
+Connection ~ 6650 2500
+Wire Wire Line
+	6650 2700 7000 2700
+Wire Wire Line
+	6400 2700 6650 2700
+Connection ~ 6650 2700
+$Comp
+L Device:Crystal_GND24_Small Y1
+U 1 1 5D351593
+P 6650 2600
+F 0 "Y1" V 6696 2434 50  0000 R CNN
+F 1 "Crystal_GND24_Small" V 6900 2550 50  0000 R CNN
+F 2 "Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm" H 6650 2600 50  0001 C CNN
+F 3 "~" H 6650 2600 50  0001 C CNN
+F 4 "ECS" H -2850 750 50  0001 C CNN "Manufacturer"
+F 5 "ECS-80-10-30B-CWN-TR" H -2850 750 50  0001 C CNN "Manufacturer Part Number"
+	1    6650 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5C765003
+P 7150 2500
+F 0 "C3" V 7200 2350 50  0000 L CNN
+F 1 "10pF" V 7200 2550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7188 2350 50  0001 C CNN
+F 3 "" H 7150 2500 50  0001 C CNN
+F 4 "" H 7150 2500 50  0001 C CNN "Manufacturer P/N"
+F 5 "Macrofab" H 7150 2500 50  0001 C CNN "Supplier"
+F 6 "MF-CAP-0603-10pF" H 7150 2500 50  0001 C CNN "Supplier P/N"
+F 7 "TDK" H -2150 800 50  0001 C CNN "Manufacturer"
+F 8 "CGA3E2C0G1H100D080AA" H -2150 800 50  0001 C CNN "Manufacturer Part Number"
+	1    7150 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7350 2600 7350 2700
+Wire Wire Line
+	7350 2600 7350 2500
+Connection ~ 7350 2600
+$Comp
+L power:GNDD #PWR011
+U 1 1 5C3B2DEE
+P 7350 2600
+F 0 "#PWR011" H 7350 2350 50  0001 C CNN
+F 1 "GNDD" H 7350 2475 50  0000 C CNN
+F 2 "" H 7350 2600 50  0001 C CNN
+F 3 "" H 7350 2600 50  0001 C CNN
+	1    7350 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5C3B2940
+P 7150 2700
+F 0 "C4" V 7100 2550 50  0000 L CNN
+F 1 "10pF" V 7100 2750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7188 2550 50  0001 C CNN
+F 3 "" H 7150 2700 50  0001 C CNN
+F 4 "" H 7150 2700 50  0001 C CNN "Manufacturer P/N"
+F 5 "Macrofab" H 7150 2700 50  0001 C CNN "Supplier"
+F 6 "MF-CAP-0603-10pF" H 7150 2700 50  0001 C CNN "Supplier P/N"
+F 7 "TDK" H -2550 1000 50  0001 C CNN "Manufacturer"
+F 8 "CGA3E2C0G1H100D080AA" H -2550 1000 50  0001 C CNN "Manufacturer Part Number"
+	1    7150 2700
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
