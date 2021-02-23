@@ -12,7 +12,7 @@ Features
 ## Photos
 Images of the board can be found in the [images](https://github.com/kanestoboi/Trailer-Leveler-Board/tree/master/images) directory.
 
-![Complete Board](https://raw.githubusercontent.com/kanestoboi/Trailer-Leveler-Board/master/images/board1.jpg)
+![Complete Board](https://raw.githubusercontent.com/kanestoboi/Trailer-Leveler-Board/master/images/board1.JPG)
 
 ![Board Render Top](https://raw.githubusercontent.com/kanestoboi/Trailer-Leveler-Board/master/images/board-render-rev1-top.png)
 
